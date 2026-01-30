@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AL BEAST — Fast Food Shop</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="web.css">
+
+    <!-- Fav icon (optional) -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#">AL BEAST</a>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><button id="orderNowTop" class="btn btn-primary">Order Now</button></li>
+                </ul>
+            </nav>
+
+            <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Delicious Fast Food. Hot & Fresh.</h1>
+                    <p>We serve fried rice, burgers, pizza, momos and more. Quick delivery, delicious taste.</p>
+                    <div class="hero-ctas">
+                        <button id="orderNow" class="btn btn-primary">Order Now</button>
+                        <a href="#menu" class="btn btn-ghost">See Menu</a>
+                    </div>
+                    <ul class="features">
+                        <li>Fresh Ingredients</li>
+                        <li>Fast Delivery</li>
+                        <li>Great Prices</li>
+                    </ul>
+                </div>
+                <div class="hero-image">
+                    <img src="https://img.freepik.com/premium-photo/photo-plate-delicious-food_646510-6201.jpg"
+                        alt="Delicious food plate">
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section id="menu" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Menu</h2>
+                    <p>Pick your favorite — we’ve got something for everyone.</p>
+                </div>
+
+                <div class="filter-row">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="rice">Fried Rice</button>
+                    <button class="filter-btn" data-filter="burger">Burgers</button>
+                    <button class="filter-btn" data-filter="pizza">Pizza</button>
+                    <button class="filter-btn" data-filter="momos">Momos</button>
+                </div>
+
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Card: Fried Rice -->
+                    <article class="card menu-item" data-category="rice">
+                        <img src="https://wallpaperaccess.com/full/2175404.jpg" alt="Fried Rice">
+                        <div class="card-body">
+                            <h3>Special Fried Rice</h3>
+                            <p>Stir-fried rice with veggies & choice of chicken or veg. Savory & satisfying.</p>
+                            <div class="card-meta">
+                                <span class="price">₹120</span>
+                                <button class="btn btn-outline order-btn" data-name="Special Fried Rice"
+                                    data-price="120">Order</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: Burger -->
+                    <article class="card menu-item" data-category="burger">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=b7a0b0b3cbd559b7b7a5b0c2c2d5c4a2"
+                            alt="Burger">
+                        <div class="card-body">
+                            <h3>Classic Burger</h3>
+                            <p>Juicy patty, fresh lettuce, tomato, and house sauce. Add cheese optional.</p>
+                            <div class="card-meta">
+                                <span class="price">₹150</span>
+                                <button class="btn btn-outline order-btn" data-name="Classic Burger"
+                                    data-price="150">Order</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: Pizza -->
+                    <article class="card menu-item" data-category="pizza">
+                        <img src="https://i.pinimg.com/originals/57/e7/a1/57e7a19334571946391a7430fcb86202.png"
+                            alt="Pizza">
+                        <div class="card-body">
+                            <h3>Margherita Pizza</h3>
+                            <p>Thin crust, fresh tomato sauce, mozzarella and basil — classic and delicious.</p>
+                            <div class="card-meta">
+                                <span class="price">₹299</span>
+                                <button class="btn btn-outline order-btn" data-name="Margherita Pizza"
+                                    data-price="299">Order</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: Momos -->
+                    <article class="card menu-item" data-category="momos">
+                        <img src="https://www.thespruceeats.com/thmb/DXZoAJoKTPS7BKEyk4H-Gw3puhc=/6016x4016/filters:fill(auto,1)/steamed-momos-wontons-1957616-hero-01-1c59e22bad0347daa8f0dfe12894bc3c.jpg"
+                            alt="Momos">
+                        <div class="card-body">
+                            <h3>Steamed Momos</h3>
+                            <p>Soft steamed dumplings served with spicy chutney. Veg & chicken available.</p>
+                            <div class="card-meta">
+                                <span class="price">₹99</span>
+                                <button class="btn btn-outline order-btn" data-name="Steamed Momos"
+                                    data-price="99">Order</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Add more menu items as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section alt">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img">
+                        <img src="https://i.ytimg.com/vi/Seg3Rmts7Yo/maxresdefault.jpg" alt="Kitchen">
+                    </div>
+                    <div class="about-content">
+                        <h2>About AL BEAST</h2>
+                        <p>We started with a simple mission: feed people fast food that tastes homemade. We use fresh
+                            ingredients and prepare orders with care. Whether you're craving rice, a burger, pizza or
+                            momos — we've got you covered.</p>
+                        <ul>
+                            <li>Open: 5:00 PM – 12:00 AM</li>
+                            <li>Delivery in 30–45 minutes</li>
+                            <li>Phone orders & online pickup available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact & Orders</h2>
+                    <p>Reach out to place phone orders or ask questions.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Visit Us</h3>
+                        <p>Two tanks Near Tawa Hotel JJ road MUMBAI 400008</p>
+                        <p><strong>Phone:</strong> +91 98765 43210</p>
+                        <p><strong>Hours:</strong>5:00 PM – 12:00 AM</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-card contact-form">
+                        <h3>Send a Message</h3>
+                        <label>
+                            Name
+                            <input type="text" name="name" id="contactName" required>
+                        </label>
+                        <label>
+                            Phone or Email
+                            <input type="text" name="contact" id="contactInfo" required>
+                        </label>
+                        <label>
+                            Message
+                            <textarea name="message" id="contactMessage" rows="4" required></textarea>
+                        </label>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                        <p id="contactResult" class="muted"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>AL BEAST © <span id="year"></span> • Fast food with flavor</div>
+            <div class="socials">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal" aria-hidden="true">
+        <div class="modal-dialog" role="dialog" aria-modal="true">
+            <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+            <div class="modal-content">
+                <h3 id="modalTitle">Order Item</h3>
+                <form id="orderForm">
+                    <div class="form-row">
+                        <label>
+                            Item
+                            <input type="text" id="itemName" name="itemName" readonly>
+                        </label>
+                        <label>
+                            Price (₹)
+                            <input type="text" id="itemPrice" name="itemPrice" readonly>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            Your Name
+                            <input type="text" id="customerName" name="customerName" required>
+                        </label>
+                        <label>
+                            Phone
+                            <input type="text" id="customerPhone" name="customerPhone" required>
+                        </label>
+                    </div>
+
+                    <label>
+                        Address / Notes
+                        <textarea id="customerAddress" name="customerAddress" rows="3" required></textarea>
+                    </label>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Place Order</button>
+                        <button type="button" id="modalCancel" class="btn btn-outline">Cancel</button>
+                    </div>
+
+                    <p id="orderResult" class="muted"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="web.js"></script>
+</body>
+
+</html>
